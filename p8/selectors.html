@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CSS Selectors</h1>
+    </header>
+    <main>
+      <h2>Su Heading2 tag selektoriumi keičiasi visi h2</h2>
+      <h2>Su Heading2 tag selektoriumi keičiasi visi h2</h2>
+      <h2>Su Heading2 tag selektoriumi keičiasi visi h2</h2>
+
+      <p class="green">Žalias (klasė green)</p>
+      <p>Paragraph</p>
+      <hr />
+      <p class="blue">Mėlynas (klasė blue)</p>
+      <p class="blue">Mėlynas (klasė blue)</p>
+      <p class="blue" id="big">Didelis Mėlynas (#id big)</p>
+      <!-- #id tie patys parametrai kaip ir <p> tik dar papildomai unikalus -->
+      <hr />
+      <div class="outer">
+        <p class="inner">
+          Descendant space (dvi klasės su SPACE, pritaikys Antram)
+        </p>
+        <p class="inner">
+          Descendant space (dvi klasės su SPACE, pritaikys Antram)
+        </p>
+        <p class="inner bold">
+          Combined selector (dvi klasės BE TARPO - pritaikys visus parametrus iš
+          viršuje esančių plius paryškins dėl uždėtos papildomos klasės
+        </p>
+        <p>Paragraph</p>
+        <p>Paragraph</p>
+      </div>
+      <hr />
+      <div>
+        <div>Father DIV and a child DIV</div>
+        <div>Father DIV and a child DIV</div>
+        <div>Father DIV and a child DIV</div>
+        <p>
+          General sibling (Pasikeičia visi p einantys po div, bet tik to pačio
+          tėvo + buvo pritaikyta adjacent sibling taisyklė, kas pakeitė pirmą P
+          po DIV)
+        </p>
+        <p>
+          General sibling (Pasikeičia visi p einantys po div, bet tik to pačio
+          tėvo)
+        </p>
+        <p>
+          General sibling (Pasikeičia visi p einantys po div, bet tik to pačio
+          tėvo)
+        </p>
+      </div>
+      <hr />
+      <a href="https://www.15min.lt/">15 min</a>
+      <a href="https://ve.lt/">Vakarų ekspresas</a>
+      <a href="https://www.delfi.lt/">Delfi.lt</a>
+      <div class="father">
+        <p>First Child</p>
+        <p>Second Child</p>
+        <p>Third Child</p>
+        <p>Fouth Child</p>
+        <p>Fith Child same father (pritaikos visiems kitiems p taip pat)</p>
+      </div>
+    </main>
+  </body>
+</html>

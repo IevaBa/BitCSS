@@ -1,22 +1,48 @@
-/* komentarai */
-p {
-  color: aqua;
-  font-size: larger;
+h2 {
+  color: lightskyblue;
 }
-.p1 {
+.green {
+  color: green;
+}
+.blue {
   color: blue;
 }
+#big {
+  font-size: 22px;
+}
+.outer .inner {
+  background: goldenrod;
+}
+/* pritaikys tik antram */
+.inner.bold {
+  font-weight: bolder;
+}
+div > div {
+  text-decoration: underline;
+  background: lightsalmon;
+  font-size: 18px;
+}
+/* tetis div pakeis visus div vaikus */
+div ~ p {
+  font-size: 20px;
+  font-weight: bold;
+  background: gray;
+}
+/* pakeis visus <p> einančius po div, bet to pačio tėvo */
+div + p {
+  color: white;
+}
+a {
+  font-size: 20px;
+}
 a:visited {
-  color: red;
+  color: blue;
 }
 a:hover {
-  color: aquamarine;
+  cursor: pointer;
+  background: grey;
 }
-p:first-child {
-  background-color: red;
+p:nth-child(5) {
+  background: pink;
 }
-@import ("styles.css");
-@import url("styles.css");
-.parent_div:first-letter {
-  color: darkorange;
-}
+/* to pačio tėvo 5-as vaikas */
