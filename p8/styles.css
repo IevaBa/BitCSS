@@ -1,0 +1,22 @@
+/* komentarai */
+p {
+  color: aqua;
+  font-size: larger;
+}
+.p1 {
+  color: blue;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  color: aquamarine;
+}
+p:first-child {
+  background-color: red;
+}
+@import ("styles.css");
+@import url("styles.css");
+.parent_div:first-letter {
+  color: darkorange;
+}
