@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  background-color: #3e497a;
+}
+/* kad paslinkus h1 į dešinę, spalva būtų vienoda  */
+h1,
+h2,
+p,
+nav {
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  padding: 2rem;
+  font-size: 3rem;
+  background-color: #3e497a;
+  color: #f0f0f0;
+  transition: margin 1s ease-in-out;
+}
+h1:hover {
+  margin-left: 4rem;
+}
+h2 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  text-align: center;
+}
+nav {
+  padding: 2rem;
+  background-color: #f1d00a;
+  font-size: 2rem;
+}
+a {
+  width: 10rem;
+  padding: 0.5rem;
+  margin-right: 10rem;
+  text-decoration: none;
+  transition: border-bottom 0.5s ease-in-out;
+}
+a:hover {
+  border-bottom: 0.5rem solid #3e497a;
+  color: #3e497a;
+  font-weight: bolder;
+}
+div {
+  margin: 2rem;
+}
+.column {
+  display: inline-block;
+}
+#width {
+  width: 10rem;
+  height: 10rem;
+  background: #3e497a;
+  transition: width 2s;
+}
+#width:hover {
+  width: 20rem;
+}
+#width_height {
+  width: 10rem;
+  height: 10rem;
+  background: #f1d00a;
+  transition: width 1s, height 1s;
+}
+#width_height:hover {
+  width: 15rem;
+  height: 15rem;
+}
+#cubic_bezier {
+  width: 10rem;
+  height: 10rem;
+  background: #3e497a;
+  transition: width 1s cubic-bezier(0.63, 0.045, 0.045, 0.655),
+    height 1s cubic-bezier(0.63, 0.045, 0.045, 0.655);
+}
+#cubic_bezier:hover {
+  width: 20rem;
+  background-color: #a2a6de;
+}
+#background {
+  width: 10rem;
+  height: 10rem;
+  background: #f1d00a;
+  transition: background 1s ease;
+}
+#background:hover {
+  background: #3e497a;
+}
+#padding {
+  width: 10rem;
+  height: 10rem;
+  background: #3e497a;
+  transition: all 1s ease-in-out;
+}
+#padding:hover {
+  padding: 10rem;
+  background: #f1d00a;
+}
+#translate {
+  width: 10rem;
+  height: 10rem;
+  background-color: #085e7d;
+  transform: translate(4rem, 4rem);
+}
+#rotate {
+  width: 10rem;
+  height: 10rem;
+  background-color: #008e89;
+  transform: rotate(270deg);
+}
+/* jei norim vertikaliai rašyti */
+#scale {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ffd32d;
+  transform: scale(2, 1.5);
+}
+#move_translate {
+  width: 10rem;
+  height: 10rem;
+  background-color: #085e7d;
+  transition: all 1s ease-in-out;
+}
+#move_translate:hover {
+  width: 10rem;
+  height: 10rem;
+  background-color: #085e7d;
+  transform: translate(4rem, 4rem);
+}
+#move_rotate {
+  width: 10rem;
+  height: 10rem;
+  background: #008e89;
+  transition: all 2s ease;
+}
+#move_rotate:hover {
+  width: 10rem;
+  height: 10rem;
+  background: #008e89;
+  transform: rotate(270deg);
+}
+#move_scale {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ffd32d;
+  transition: all 1s ease-out;
+}
+#move_scale:hover {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ffd32d;
+  transform: scale(2, 1.5);
+}
