@@ -54,14 +54,15 @@ a:hover {
   font-weight: bolder;
 }
 div {
-  margin: 2rem;
-}
-.column {
-  display: inline-block;
-}
-#width {
+  margin: 1rem;
   width: 10rem;
   height: 10rem;
+}
+.column {
+  float: left;
+  width: 21vw;
+}
+#width {
   background: #3e497a;
   transition: width 2s;
 }
@@ -69,8 +70,6 @@ div {
   width: 20rem;
 }
 #width_height {
-  width: 10rem;
-  height: 10rem;
   background: #f1d00a;
   transition: width 1s, height 1s;
 }
@@ -79,8 +78,6 @@ div {
   height: 15rem;
 }
 #cubic_bezier {
-  width: 10rem;
-  height: 10rem;
   background: #3e497a;
   transition: width 1s cubic-bezier(0.63, 0.045, 0.045, 0.655),
     height 1s cubic-bezier(0.63, 0.045, 0.045, 0.655);
@@ -90,8 +87,6 @@ div {
   background-color: #a2a6de;
 }
 #background {
-  width: 10rem;
-  height: 10rem;
   background: #f1d00a;
   transition: background 1s ease;
 }
@@ -99,8 +94,6 @@ div {
   background: #3e497a;
 }
 #padding {
-  width: 10rem;
-  height: 10rem;
   background: #3e497a;
   transition: all 1s ease-in-out;
 }
@@ -109,57 +102,120 @@ div {
   background: #f1d00a;
 }
 #translate {
-  width: 10rem;
-  height: 10rem;
   background-color: #085e7d;
   transform: translate(4rem, 4rem);
 }
 #rotate {
-  width: 10rem;
-  height: 10rem;
   background-color: #008e89;
   transform: rotate(270deg);
 }
 /* jei norim vertikaliai rašyti */
 #scale {
-  width: 10rem;
-  height: 10rem;
   background-color: #ffd32d;
   transform: scale(2, 1.5);
 }
 #move_translate {
-  width: 10rem;
-  height: 10rem;
   background-color: #085e7d;
   transition: all 1s ease-in-out;
 }
 #move_translate:hover {
-  width: 10rem;
-  height: 10rem;
   background-color: #085e7d;
   transform: translate(4rem, 4rem);
 }
 #move_rotate {
-  width: 10rem;
-  height: 10rem;
   background: #008e89;
   transition: all 2s ease;
 }
 #move_rotate:hover {
-  width: 10rem;
-  height: 10rem;
   background: #008e89;
   transform: rotate(270deg);
 }
 #move_scale {
-  width: 10rem;
-  height: 10rem;
   background-color: #ffd32d;
   transition: all 1s ease-out;
 }
 #move_scale:hover {
-  width: 10rem;
-  height: 10rem;
   background-color: #ffd32d;
   transform: scale(2, 1.5);
+}
+#background_color {
+  background-color: #ffd32d;
+  animation-name: background;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+@keyframes background {
+  0% {
+    background-color: #d6b12b;
+  }
+  25% {
+    background-color: #008e89;
+  }
+  50% {
+    background-color: #085e7d;
+  }
+  75% {
+    background-color: #008e89;
+  }
+  100% {
+    background-color: #bfc839;
+  }
+}
+#color_circle {
+  background-color: #008e89;
+  position: relative;
+  animation-name: circle;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
+  /* kiek kartu kartosis */
+  animation-direction: alternate;
+  /* pradzioj i prieki, paskui atgal */
+  animation-timing-function: ease-out;
+}
+@keyframes circle {
+  0% {
+    background-color: #ffd32d;
+    left: 0;
+    top: 0;
+  }
+  25% {
+    background-color: #008e89;
+    left: 5rem;
+    top: 0;
+  }
+  50% {
+    background-color: #085e7d;
+    left: 5rem;
+    top: 5rem;
+  }
+  75% {
+    background-color: #008e89;
+    left: 0;
+    top: 5rem;
+  }
+  100% {
+    background-color: #ffd32d;
+    left: 0;
+    top: 0;
+  }
+}
+#windows1 {
+  background-color: #f0652a;
+  width: 3rem;
+  height: 3rem;
+}
+#windows2 {
+  background-color: #8cbd01;
+  width: 3rem;
+  height: 3rem;
+}
+#windows3 {
+  width: 3rem;
+  height: 3rem;
+  background-color: #40aee9;
+}
+#windows4 {
+  width: 3rem;
+  height: 3rem;
+  background-color: #f7bd01;
 }

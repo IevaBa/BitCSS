@@ -14,16 +14,16 @@ nav {
 article {
   border: 2px solid gray;
   width: 50%;
+  height: 400px;
   float: left;
-  height: 200px;
 }
 aside {
   border: 2px solid gray;
   float: right;
-  width: 400px;
-  height: 150px;
+  width: 45%;
+  height: 190px;
   text-align: justify;
-  margin: 10px 200px 0;
+  margin: 10px 20px 0;
 }
 h1 {
   border: 3px double gray;
@@ -45,17 +45,19 @@ a:hover {
   border-left: 6px solid rgb(73, 161, 208);
   margin: 0;
 }
-img {
-  width: 1610px;
-  height: 200px;
+.picture {
+  width: 100vw;
+  height: 15vh;
+  background-image: url(https://i.pinimg.com/originals/70/6c/6a/706c6aa297207e719f0c39cacbc61d09.png),
+    linear-gradient(
+      109.6deg,
+      rgb(81, 157, 154) 11.2%,
+      rgb(154, 214, 212) 55.4%,
+      rgb(235, 233, 121) 100.2%
+    );
+  background-size: contain;
 }
-div {
-  display: block;
-  border-left: 6px;
-  margin-left: 6px;
+.news {
+  width: 100%;
+  height: 150px;
 }
-.logo {
-  width: 150px;
-}
-
-/* kad nemirgetu islaikyti margin */

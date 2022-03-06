@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* CSS RESET */
+html {
+  font-size: 62.5%;
+}
+/* jei naudojam REM, kad papraščiau būtų versti px */
+header {
+  border: 0.2rem solid gray;
+  background: linear-gradient(to left, rgb(182, 244, 146), rgb(51, 139, 147));
+  padding: 2rem;
+}
+h1 {
+  color: white;
+  padding-left: 2rem;
+  font-size: 3rem;
+}
+h2 {
+  padding: 1rem;
+}
+p {
+  font-size: 1.8rem;
+  padding: 1rem;
+  font-family: monospace;
+  line-height: 1.5;
+}
+nav {
+  display: flex;
+  border: 0.2rem solid gray;
+  width: 100vw;
+  background-image: url(https://thumbs.dreamstime.com/z/heart-shape-various-vegetables-fruits-healthy-food-concept-isolated-white-background-140287808.jpg);
+  background: linear-gradient(to left, rgb(179, 228, 150), rgb(51, 139, 147));
+  padding: 3rem;
+}
+a {
+  color: black;
+  border: 1rem none transparent;
+  border-radius: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 2rem;
+  cursor: pointer;
+  margin-right: 25rem;
+  margin-left: 0.6rem;
+}
+a:hover {
+  color: white;
+  border-left: 0.6rem solid #4bc240;
+  margin-left: 0;
+}
+button {
+  width: 18vw;
+  height: 23vh;
+  opacity: 0.5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+button:hover {
+  opacity: 1;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.goods {
+  float: left;
+  margin: 3rem;
+}
+.paprika {
+  background-image: url(https://www.pngitem.com/pimgs/m/93-935769_paprika-png-transparent-png.png);
+  background-size: cover;
+}
+.brokoli {
+  background-image: url(https://hips.hearstapps.com/del.h-cdn.co/assets/16/25/640x923/broccoli.jpg?resize=980:*);
+  background-size: cover;
+}
+.bananas {
+  background-image: url(https://www.seekpng.com/png/detail/404-4045374_platano-png-7-bananas.png);
+  background-size: cover;
+}
+.oranges {
+  background-image: url(https://cdn.picpng.com/orange/orange-web-25730.png);
+  background-color: white;
+}
+.bluberries {
+  background-image: url(https://i.pinimg.com/originals/54/80/ec/5480ec102c8fa7e92ea61bd219a20494.png);
+  background-color: white;
+}
+.strawberries {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ_6RlpSbCsk1CalpPkUbVJ937PZiCqiPzA&usqp=CAU);
+  background-size: cover;
+  background-color: transparent;
+}
+.basket {
+  background: white;
+  color: #004c64;
+}
+.basket:hover {
+  background-color: white;
+  color: #004c64;
+  border-left: 0.6rem solid #348f2c;
+}

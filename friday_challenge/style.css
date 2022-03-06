@@ -7,17 +7,13 @@
 html {
   font-size: 62.5%;
 }
-ul {
-  overflow: hidden;
-}
-li {
-  display: inline-block;
-}
 img {
-  width: 18vw;
-  height: 25vh;
+  width: 9vw;
+  height: 18vh;
   padding: 1rem;
-  margin: 3rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  filter: invert(1);
 }
 h2,
 p {
@@ -40,14 +36,18 @@ th {
   width: 0.5rem;
 }
 #random_solid {
-  background-color: #66bfbf;
+  background-color: #8f3f36;
 }
 #apple_pay {
-  background-color: #4f81c7;
+  background-color: #bf8b42;
 }
 #user_solid {
-  background-color: #d55b3e;
+  background-color: #1ea1ba;
 }
 #university_solid {
-  background-color: grey;
+  background-color: #6e6e6e;
+}
+#number1 {
+  border: 0.5rem solid #66bfbf;
+  border-radius: 50%;
 }
