@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 1rem;
+}
+h2,
+p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+img {
+  width: 8rem;
+  margin: 0 auto;
+  display: inline-block;
+}
+/* jei flex panaudota, inline jau neveikia */
+.column4 {
+  float: left;
+  width: 25%;
+  padding: 1rem;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.column3 {
+  float: left;
+  width: 33.334%;
+  padding: 1rem;
+  height: 30vh;
+  position: relative;
+}
+.column3 p {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+/* Vertical alignment */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left {
+  float: left;
+  width: 25%;
+}
+.middle {
+  float: left;
+  width: 50%;
+}
+.right {
+  float: left;
+  width: 25%;
+}
+#img_inline {
+  margin-top: 3rem;
+  margin-left: 5rem;
+}

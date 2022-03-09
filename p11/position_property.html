@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Position property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      footer {
+        font-size: 2rem;
+        text-align: center;
+      }
+      div {
+        font-size: 2rem;
+        width: 20rem;
+        border: 0.1rem solid black;
+      }
+      p {
+        font-size: 2rem;
+        text-align: justify;
+        line-height: 1.5;
+      }
+      .sticky {
+        display: inline;
+        position: sticky;
+        background-color: #63c0e8;
+        border: 2px solid #335faf;
+        margin: 0.5rem;
+      }
+      .item1 {
+        top: 1rem;
+        left: 1rem;
+      }
+      /* prisikabins parodo koks liks aukstis skrolinant, jei 0 tai paciam virsur bus  */
+      .item2 {
+        top: 3rem;
+      }
+      .item3 {
+        bottom: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- STATIC: default positioning according to element type (incline vs. block ) -->
+    <div>STATIC</div>
+    <div>STATIC</div>
+    <br />
+
+    <!-- RELATIVE: positioning an element relative to where it was supposed to be displayed -->
+    <div
+      style="background-color: grey; position: relative; top: 1rem; left: 1rem"
+    >
+      RELATIVE 1
+    </div>
+    <div
+      style="
+        background-color: blueviolet;
+        height: 5rem;
+        text-align: center;
+        line-height: 5rem;
+      "
+    >
+      STATIC
+    </div>
+    <div
+      style="
+        position: relative;
+        background-color: goldenrod;
+        top: -1rem;
+        left: 1rem;
+        /* z-index: 1; jei norim RELATIVE 3 iskelti i virsu*/
+      "
+    >
+      RELATIVE 3
+    </div>
+    <div
+      style="
+        position: relative;
+        background-color: rgb(223, 199, 137);
+        top: -2rem;
+        left: 1rem;
+      "
+    >
+      RELATIVE 4
+    </div>
+    <br /><br />
+
+    <!-- ABSOLUTE: positioning relative to parents 0,0 coordinate -->
+    <div style="width: 10rem; position: relative; height: 10rem; left: 2rem">
+      <div
+        style="
+          background-color: lightpink;
+          width: 5rem;
+          height: 5rem;
+          position: absolute;
+          top: 1rem;
+          left: 3rem;
+        "
+      >
+        ABSOLUTE
+      </div>
+    </div>
+    <br /><br />
+
+    <!-- STICKY: element will be displayed as configured by css, but will not be scrollable beyond a certain threshold -->
+    <div class="sticky item1">Item 1</div>
+    <div class="sticky item2">Item 2</div>
+    <div class="sticky item3">Item 3</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias veniam
+      repellat repudiandae aperiam possimus dolor Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Modi commodi rerum veniam dignissimos,
+      beatae nulla! Soluta nesciunt quis ducimus placeat sapiente sit assumenda,
+      voluptatem animi tenetur harum aspernatur modi atque! Lorem ipsum dolor
+      sit amet consectetur adipisicing elit. Doloremque asperiores sunt labore
+      laudantium et. Reiciendis voluptas, modi cupiditate quis minima minus,
+      fuga quaerat est quisquam doloribus quas repellat aliquam culpa!
+    </p>
+
+    <div style="padding-bottom: 50rem"></div>
+
+    <!-- FIXED positioning - positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore sint
+      earum necessitatibus tempore voluptatum accusantium explicabo! Aut,
+      perspiciatis voluptate nihil maiores corrupti reprehenderit perferendis
+      natus molestiae quasi laudantium eveniet.
+    </p>
+    <footer
+      style="
+        width: 100%;
+        padding: 2rem;
+        border: 1px solid black;
+        background-color: red;
+        position: fixed;
+        top: 95vh;
+        /* uzfiksuos 95dali vh, kurioj vietoj bus divas nuo virsaus */
+      "
+    >
+      FOOTER
+    </footer>
+    <div style="padding-bottom: 50rem"></div>
+  </body>
+</html>
