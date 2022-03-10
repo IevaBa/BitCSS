@@ -1,0 +1,68 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+  }
+  .grid-container {
+    height: 100vh;
+    border: 10px solid #14a76c;
+    display: grid;
+    grid-template-areas:
+      " header header header "
+      "side-nav main ads"
+      "footer footer footer";
+    grid-template-rows: 5rem 1fr 10rem;
+    grid-template-columns: 5rem 1fr 5rem;
+    /* grid-template: ; */
+  }
+  /* galim susidelioti ir uzsivadinti kaip norim, geriau taisyklinga forma susidelioti, geriaus supras kompas */
+  /* galim aukscius ir plociu reguliuoti rows ir columns papildomai */
+
+  .grid-item {
+    background-color: #ccc;
+    border: 4px solid #ff652f;
+    padding: 20px;
+  }
+  .item-1 {
+    grid-area: header;
+  }
+  .item-2 {
+    grid-area: side-nav;
+  }
+  .item-3 {
+    grid-area: main;
+  }
+  .item-4 {
+    grid-area: ads;
+  }
+  .item-5 {
+    grid-area: footer;
+  }
+  @media screen and (max-width: 768px) {
+    .item-1 {
+      background-color: #e73c7e;
+    }
+    .item-3 {
+      order: 1;
+    }
+    .item-2 {
+      order: 2;
+    }
+    .item-4 {
+      order: 3;
+    }
+  }
+  /* daug aprasymu bus plocio pagrinde */
+  /* kas svarbiausia virsuj, vietoj stulpeliu pvs, kad eilutes rodytu */
+</style>
+<body>
+  <div class="grid-container">
+    <div class="grid-item item-1">item 1</div>
+    <div class="grid-item item-2">item 2</div>
+    <div class="grid-item item-3">item 3</div>
+    <div class="grid-item item-4">item 4</div>
+    <div class="grid-item item-5">item 5</div>
+  </div>
+</body>

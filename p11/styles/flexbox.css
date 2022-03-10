@@ -9,7 +9,7 @@ html {
 body {
   font-family: Arial, Helvetica;
 }
-body,
+
 header,
 nav,
 footer,
@@ -30,6 +30,7 @@ section {
   padding: 0 2rem;
   margin: 3rem;
   line-height: 1.5;
+  background-color: white;
 }
 article {
   padding: 0 0 2rem 0;
@@ -122,4 +123,26 @@ li {
 }
 #aside_2 {
   width: calc(100% / 8 * 2);
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 1rem;
+  }
+  section,
+  aside {
+    padding: 0;
+  }
+  .find_us {
+    display: none;
+  }
+  .article {
+    padding: 0 0 1rem 0;
+  }
+  main {
+    margin: 0;
+    flex-grow: 2;
+  }
+  li {
+    font-size: 1.2rem;
+  }
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      @import "https://fonts.googleapis.com/css?family=Lato:100";
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+      }
+      .gc {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-areas:
+          "header header header header header header"
+          "section1 section1 section2 section2 section3 section3"
+          "section4 section4 section4 section5 section5 section5"
+          "footer footer footer footer footer footer";
+
+        grid-template-rows: 1fr 5fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* jei uzfiksuojam colums dydi, tai nuo teks neissidarkys */
+        /* grid-template-areas:
+                    "header header header header header header"
+                    "section1 section1 section2 section2 section3 section3"
+                    "section1 section1 section2 section2 section3 section3"
+                    "section1 section1 section2 section2 section3 section3"
+                    "section1 section1 section2 section2 section3 section3"
+                    "section4 section4 section4 section5 section5 section5"
+                    "section4 section4 section4 section5 section5 section5"
+                    "section4 section4 section4 section5 section5 section5"
+                    "footer footer footer footer footer footer"; */
+        grid-gap: 1rem;
+      }
+      .gi {
+        background-color: rgb(205, 233, 81);
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+      .item-1 {
+        grid-area: header;
+        color: #fff;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        position: relative;
+        animation: change 10s ease-in-out infinite;
+      }
+      @keyframes change {
+        0% {
+          background-position: 0 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0 50%;
+        }
+      }
+      .item-2 {
+        grid-area: section1;
+      }
+      .item-3 {
+        grid-area: section2;
+      }
+      .item-4 {
+        grid-area: section3;
+      }
+      .item-5 {
+        grid-area: section4;
+      }
+      .item-6 {
+        grid-area: section5;
+      }
+      .item-7 {
+        grid-area: section6;
+      }
+      .item-8 {
+        grid-area: footer;
+        /* height: 150%; */
+      }
+      .item-2,
+      .item-5 {
+        margin-left: 1rem;
+      }
+      .item-4,
+      .item-6 {
+        margin-right: 1rem;
+      }
+    </style>
+    <main class="gc">
+      <header class="gi item-1">
+        <h1>Pure CSS Animated Gradient Background</h1>
+      </header>
+      <section class="gi item-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, minima
+        est architecto doloremque vel eaque cupiditate dolorum odit? Illo
+        voluptatum hic mollitia, similique doloremque consectetur labore neque
+        eaque temporibus illum?
+      </section>
+      <section class="gi item-3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis quia
+        excepturi illum quasi accusantium reiciendis tenetur at eum laudantium,
+        obcaecati blanditiis dolorum quas quis aspernatur nulla doloribus
+        doloremque numquam iure.
+      </section>
+      <section class="gi item-4">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi delectus
+        rem soluta, repellendus maiores quia dolore molestias adipisci
+        perspiciatis earum animi. Tenetur maxime qui modi distinctio deserunt
+        commodi cum? Expedita.
+      </section>
+      <section class="gi item-5">item 5</section>
+      <section class="gi item-6">item 6</section>
+      <!-- <section class="gi item-7">item 7</section> -->
+      <footer class="gi item-8">item 8</footer>
+    </main>
+  </body>
+</html>
