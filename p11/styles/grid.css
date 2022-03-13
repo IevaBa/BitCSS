@@ -7,7 +7,7 @@
 html {
   font-size: 62.5%;
 }
-body,
+nav,
 footer {
   background-color: #c65d7b;
 }
@@ -19,16 +19,9 @@ nav {
   padding: 2rem;
   height: 10vh;
   color: white;
+  top: 0;
+  position: sticky;
 }
-main {
-  display: grid;
-  grid-template-columns: 15% 50% 15%;
-  justify-content: space-evenly;
-  height: 70vh;
-  background-color: white;
-  padding-top: 1rem;
-}
-
 h1 {
   font-size: 2rem;
 }
@@ -36,9 +29,31 @@ h2 {
   font-size: 1.5rem;
   padding: 1.5rem 0;
 }
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: space-evenly;
+  grid-column-gap: 5rem;
+  background-color: white;
+  align-content: center;
+  padding: 1rem;
+  padding-bottom: 19rem;
+}
+aside,
+.article1 {
+  height: min(40vh, auto);
+  padding: 1rem;
+}
 article {
   text-indent: 4rem;
   /* atitraukia pirmą eilutę nuo krašto */
+}
+.aside2 {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+li {
+  list-style: none;
 }
 article,
 aside > p {
@@ -58,10 +73,6 @@ img {
   width: 3rem;
   filter: invert(1);
   border-radius: 0.5rem;
-}
-.aside2 {
-  font-size: 1.5rem;
-  line-height: 1.7;
 }
 .find_us {
   display: grid;
@@ -101,3 +112,54 @@ img {
 .copyright p {
   font-size: 1.1rem;
 }
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0rem;
+  }
+  aside,
+  .article1 {
+    border: 0.1rem solid gray;
+  }
+  .aside1 {
+    order: 2;
+  }
+  .article1 {
+    grid-column: 1 / span2;
+    order: 1;
+    text-indent: 0;
+  }
+  .aside2 {
+    order: 3;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
+  }
+  aside,
+  .article1 {
+    border: 0.1rem solid gray;
+  }
+  .aside1 {
+    order: 2;
+    height: fit-content;
+  }
+  .article1 {
+    order: 1;
+    text-indent: 0;
+  }
+  .aside2 {
+    order: 3;
+    height: fit-content;
+  }
+}
+
+/* USE MAX-WIDTH, MIN-WIDTH */
+/* if @media MIN-WIDTH mean MOBILE FIRST tai galim tiesiog istrinti pries tai layout savybes ir ideti i media */
+/* avoid too many breakpoints */
+/* font-size:clamp (2rem, 1rem+, 4rem)  responsive reguoja clamp galim ir paddingui naudoti. Clamp veikia tik su 3reiksmem -minimum-max ir ideal size labai naudinga for font sizes
+/* width: min(500px, 70%) ekvivalentas width: 70%, max-width: 500px you can do math there*/
